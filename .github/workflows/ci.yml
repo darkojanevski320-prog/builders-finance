@@ -59,11 +59,9 @@ jobs:
       - run: npm ci
       - name: Apply database migrations
         run: npx supabase db push --project-ref "$SUPABASE_PROJECT_REF" --yes
-      - name: Pull Vercel settings
-        run: npx vercel@56.2.1 pull --yes --environment=production --token="$VERCEL_TOKEN"
-      - name: Build
-        run: npx vercel@56.2.1 build --prod --token="$VERCEL_TOKEN"
+      # Build on Vercel, not in CI: Vercel keeps the production env vars sensitive, so a
+      # local `vercel pull` + prebuilt deploy ships a build without the Supabase settings.
       - name: Deploy
-        run: npx vercel@56.2.1 deploy --prebuilt --prod --token="$VERCEL_TOKEN"
+        run: npx vercel@56.2.1 deploy --prod --yes --token="$VERCEL_TOKEN"
       - name: Smoke test
         run: npm run smoke -- "${{ vars.PRODUCTION_URL }}"
