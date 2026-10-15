@@ -32,13 +32,21 @@ This is the canonical project guide; `AGENTS.md` is a short Codex adapter.
 
 ## Working commands and sources
 
-No commands yet. Add verified dev and test commands here once the stack exists.
+Run `npm run db:start` and `npm run env:local` once per session for local work.
+
+| Command | Purpose |
+|---|---|
+| `npm run dev` | App on http://localhost:3000 |
+| `npm test` | Unit tests |
+| `npm run test:db` | pgTAP database tests (local Supabase) |
+| `npm run test:e2e` | Playwright tests (local Supabase) |
+| `npm run lint && npm run typecheck` | Static checks |
 
 | Task | Read or use |
 |---|---|
 | Current work | `HANDOFF.md` |
 | Product design | `docs/specs/2026-10-15-builders-finance-design.md` (approved) |
-| Implementation plan | `docs/plans/2026-10-15-builders-finance-v1.md` (waiting for review) |
+| Implementation plan | `docs/plans/2026-10-15-builders-finance-v1.md` (approved, executing) |
 
 ## Continuity
 
