@@ -1,6 +1,7 @@
 import { Suspense } from 'react';
 import { DateRangePicker } from './date-range-picker';
 import { ResetButton } from './reset-button';
+import { ThemeToggle } from './theme-toggle';
 
 export function TopBar({ today }: { today: string }) {
   return (
@@ -11,6 +12,7 @@ export function TopBar({ today }: { today: string }) {
       <div className="flex items-center gap-3 text-sm text-muted-foreground">
         <span>This is your private demo copy</span>
         <ResetButton />
+        <ThemeToggle />
       </div>
     </header>
   );

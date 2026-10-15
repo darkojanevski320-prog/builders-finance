@@ -1,6 +1,7 @@
 import { redirect } from 'next/navigation';
 import { getSandboxState } from '@/lib/data/sandbox';
 import { createClient } from '@/lib/supabase/server';
+import { ThemeToggle } from '@/components/shell/theme-toggle';
 import { StartForm } from './start-form';
 
 export default async function WelcomePage({ searchParams }: { searchParams: Promise<{ expired?: string }> }) {
@@ -10,6 +11,9 @@ export default async function WelcomePage({ searchParams }: { searchParams: Prom
 
   return (
     <main className="mx-auto flex min-h-screen max-w-lg flex-col justify-center gap-6 px-4 py-16">
+      <div className="fixed top-4 right-4">
+        <ThemeToggle />
+      </div>
       <div className="space-y-3">
         <p className="text-sm font-medium text-muted-foreground">Builders Finance</p>
         <h1 className="text-3xl font-semibold tracking-tight">See where your money goes</h1>

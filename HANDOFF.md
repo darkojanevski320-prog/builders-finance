@@ -12,6 +12,8 @@ live Supabase project, deploys to Vercel, and runs a smoke test.
 
 ## Changed recently
 
+- 2026-10-15: Added a dark theme toggle (top right of the app and the welcome screen). The choice
+  is saved in the browser; default is light.
 - 2026-10-15: Designed, planned, and built version 1 in one session. Details in
   `docs/history/2026-10-15-design-and-build.md`.
 
@@ -52,7 +54,7 @@ live Supabase project, deploys to Vercel, and runs a smoke test.
   - CI hardening: add a `permissions` block, pin actions by SHA, pass `PRODUCTION_URL` through `env`.
   - `app/welcome/actions.ts` calls Supabase directly instead of through `lib/data`.
 - Possible features: real accounts (email sign-in replacing anonymous), more than one member per
-  business, PDF invoices, dark mode.
+  business, PDF invoices.
 
 ## Verification / commands
 

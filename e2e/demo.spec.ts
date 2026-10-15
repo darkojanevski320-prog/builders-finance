@@ -88,3 +88,25 @@ test('two browsers get separate sandboxes', async ({ browser }) => {
   await contextA.close();
   await contextB.close();
 });
+
+test('switches to the dark theme and remembers it', async ({ page }) => {
+  await openDemo(page);
+  const html = page.locator('html');
+  const toggle = page.getByRole('button', { name: 'Toggle dark theme' });
+
+  await expect(html).not.toHaveClass(/\bdark\b/);
+  await toggle.click();
+  await expect(html).toHaveClass(/\bdark\b/);
+
+  await page.reload();
+  await expect(html).toHaveClass(/\bdark\b/);
+
+  await page.getByRole('button', { name: 'Toggle dark theme' }).click();
+  await expect(html).not.toHaveClass(/\bdark\b/);
+});
+
+test('shows the theme toggle on the welcome screen', async ({ page }) => {
+  await page.goto('/welcome');
+  await page.getByRole('button', { name: 'Toggle dark theme' }).click();
+  await expect(page.locator('html')).toHaveClass(/\bdark\b/);
+});

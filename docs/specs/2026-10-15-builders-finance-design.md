@@ -27,8 +27,8 @@ own free Vercel and Supabase accounts.
 ## Non-goals for version 1
 
 - Real accounts, email login, or more than one member per business.
-- A separate clients screen, settings, PDF export, dark mode, or multiple currencies. The
-  demo uses US dollars.
+- A separate clients screen, settings, PDF export, or multiple currencies. The demo uses
+  US dollars. (Dark mode was added after version 1 at Darko's request, 2026-10-15.)
 - Bank connections or imports of real financial data. The app uses generated sample data
   only.
 - Any feature that moves money. The app records payments; it never sends or receives them.
