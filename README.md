@@ -5,6 +5,8 @@ health of the business, with date ranges and filters. Built live on a podcast wi
 
 Every visitor gets a private, editable copy of a sample business. No login. All data is made up.
 
+**Live demo:** https://builders-finance.vercel.app
+
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fdarkojanevski320-prog%2Fbuilders-finance&env=NEXT_PUBLIC_SUPABASE_URL,NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY&envDescription=Run%20npm%20run%20setup%20to%20get%20both%20values&envLink=https%3A%2F%2Fgithub.com%2Fdarkojanevski320-prog%2Fbuilders-finance%23setup&project-name=builders-finance&repository-name=builders-finance)
 
 ## What it does
