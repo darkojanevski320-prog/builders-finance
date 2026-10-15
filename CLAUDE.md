@@ -15,6 +15,7 @@ This is the canonical project guide; `AGENTS.md` is a short Codex adapter.
   - Income and outbound expenses analysis.
   - Invoices that are due, and their status.
   - Overall financial situation, with filters, date ranges and a finance dashboard.
+- Target customer: any small business owner, no specific industry. "Builders" is the brand only.
 - This is a product for other businesses. It is separate from `../Business Finance/`
   (Bold Boost LLC's own ledger) and `../Digital Corner Bookkeeping/` (the Dutch BV).
   Do not read or copy their real financial data into this project.

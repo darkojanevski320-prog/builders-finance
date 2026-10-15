@@ -18,10 +18,10 @@ sectioned design, written spec in `docs/specs/`, then an implementation plan.
 
 - Separate from `../Business Finance/` (Bold Boost's own books). No shared data.
 - Sample data only until a real data source is approved.
+- Target customer: any small business owner, no specific industry. "Builders" is only the brand (Darko, 2026-10-15).
 
 ## Open questions / blockers
 
-- Who is the target customer ("Builders": construction trades, or any small business)?
 - Where does the data come from (manual entry, CSV import, bank sync, accounting tool)?
 - Single-business tool for Darko's clients, or multi-tenant SaaS?
 - Tech stack and hosting.
