@@ -45,7 +45,7 @@ Run `npm run db:start` and `npm run env:local` once per session for local work.
 |---|---|
 | Current work | `HANDOFF.md` |
 | Product design | `docs/specs/2026-10-15-builders-finance-design.md` (approved) |
-| Implementation plan | `docs/plans/2026-10-15-builders-finance-v1.md` (approved, executing) |
+| Implementation plan | `docs/plans/2026-10-15-builders-finance-v1.md` (done, version 1 live) |
 
 ## Continuity
 

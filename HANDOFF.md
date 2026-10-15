@@ -43,7 +43,15 @@ live Supabase project, deploys to Vercel, and runs a smoke test.
 
 ## Next actions
 
-- Possible follow-ups: real accounts (email sign-in replacing anonymous), more than one member per
+- Small fixes the final review deferred (none block the demo):
+  - Client names that differ only in inner spacing create a second client.
+  - After the 1-hour token lifetime, an expired visitor sees plain `/welcome` without the expired notice.
+  - An invoice above $1B saves but cannot be marked paid; add a total limit to the invoice schema.
+  - A custom date range has no maximum span; cap it (for example 10 years).
+  - `fetchAll` assumes Supabase `max_rows` is at least 1000.
+  - CI hardening: add a `permissions` block, pin actions by SHA, pass `PRODUCTION_URL` through `env`.
+  - `app/welcome/actions.ts` calls Supabase directly instead of through `lib/data`.
+- Possible features: real accounts (email sign-in replacing anonymous), more than one member per
   business, PDF invoices, dark mode.
 
 ## Verification / commands
