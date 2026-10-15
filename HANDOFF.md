@@ -6,18 +6,18 @@ Last updated: 2026-10-15
 
 ## Current focus
 
-Product design for the Builders Finance app, in the brainstorming phase. No spec,
-plan or code yet. Four scoping decisions are made (below). One question is waiting
-on Darko: where demo edits are stored, which also sets the stack.
+Product design for the Builders Finance app. All 7 design sections are approved and
+the spec is written: `docs/specs/2026-10-15-builders-finance-design.md`. Waiting on
+Darko to review the written spec. No plan or code yet.
 
 Design flow still to run, in order:
 
-1. Darko answers the storage and stack question.
-2. Propose 2 to 3 approaches with trade-offs and a recommendation.
-3. Present the design in sections (screens, data model, data flow, sample data
+1. Done: storage and stack chosen (sandbox per visitor, Next.js, Vercel, Supabase).
+2. Done: approaches compared.
+3. Done: present the design in sections (screens, data model, data flow, sample data
    generator, error handling, testing) and get approval after each one.
-4. Write the spec to `docs/specs/2026-10-DD-builders-finance-design.md`, self-review it,
-   commit it, and have Darko review it.
+4. Done: spec written to `docs/specs/2026-10-15-builders-finance-design.md`, self-reviewed,
+   committed. Waiting: Darko reviews it.
 5. Write the implementation plan in `docs/plans/`. No app code before the plan is approved.
 
 ## Changed recently
@@ -34,21 +34,18 @@ Design flow still to run, in order:
 - Target customer: any small business owner, no specific industry. "Builders" is only the brand (Darko, 2026-10-15).
 - Version 1: demo prototype, one sample business, realistic fake data, no login. Data model scoped per business so it can become multi-business SaaS later (Darko, 2026-10-15).
 - Demo is fully editable: add expenses, create invoices, mark invoices paid, plus a reset to the sample data (Darko, 2026-10-15).
+- Storage (Darko, 2026-10-15): private sandbox per visitor. Supabase anonymous sign-in,
+  each visitor gets a copy of the sample business, RLS per business, Reset regenerates,
+  nightly cleanup of old sandboxes. Stack: Next.js on Vercel plus Supabase, TypeScript.
+- Built live on the podcast; the public repo is the viewer deliverable. MIT license.
+  Remove references to Darko's other projects from repo docs before launch (Darko, 2026-10-15).
 - No workspace-wide stack convention exists. Darko's other dashboards
   (Instagram Outreach Automation, Influencers Infra) use Cloudflare Pages and Supabase.
 
 ## Open questions / blockers
 
-- **Waiting on Darko: where do demo edits live?** Options presented 2026-10-15:
-  - **Each visitor's browser (recommended):** static Vite + React + TypeScript app on
-    Cloudflare Pages. A seeded generator creates 12 to 18 months of income, expenses
-    and invoices; edits persist in the visitor's browser storage; Reset regenerates.
-    Visitors never see each other's changes; no server or database to run. All data
-    access goes through one repository interface so a Supabase repository can replace
-    it for the SaaS version without touching the dashboard.
-  - **Shared Supabase database:** Next.js plus Supabase from day one. Closer to final
-    SaaS, but every visitor edits the same business, so it needs a scheduled reset and
-    a hosted database for a no-login demo.
+- **Waiting on Darko:** review of the written spec.
+
 - Hosting accounts (2026-10-15): Darko created new accounts only for this project and
   chose Vercel plus Supabase, which points to the shared Supabase option above. Confirm
   this in the design step.
@@ -68,7 +65,8 @@ Design flow still to run, in order:
 
 ## Next actions
 
-- Get Darko's answer to the storage question, then continue the design flow above.
+- After Darko approves the spec, write the implementation plan in `docs/plans/` with the
+  writing-plans skill. No app code before the plan is approved.
 
 ## Verification / commands
 
