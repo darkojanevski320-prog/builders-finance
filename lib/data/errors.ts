@@ -19,6 +19,7 @@ const BY_MESSAGE: Record<string, string> = {
   client_required: 'Enter a client name.',
   invalid_status: GENERIC_SAVE_ERROR,
   invoice_not_found: "We couldn't find that invoice.",
+  row_limit_reached: 'Your demo copy is full. Reset sample data to start over.',
   not_a_member: SANDBOX_EXPIRED_MESSAGE,
   not_authenticated: SANDBOX_EXPIRED_MESSAGE,
 };

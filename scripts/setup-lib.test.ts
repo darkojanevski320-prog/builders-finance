@@ -31,7 +31,12 @@ describe('setup helpers', () => {
     expect(pickPublishableKey([{ type: 'secret', api_key: 'sb_secret_x' }])).toBeNull();
     expect(pickPublishableKey({ error: 'nope' })).toBeNull();
   });
-  it('turns on anonymous sign-in with a 300 per hour limit', () => {
-    expect(SETUP_AUTH_CONFIG).toEqual({ external_anonymous_users_enabled: true, rate_limit_anonymous_users: 300 });
+  it('turns on anonymous sign-in with a 300 per hour limit and turns off email and phone sign-up', () => {
+    expect(SETUP_AUTH_CONFIG).toEqual({
+      external_anonymous_users_enabled: true,
+      rate_limit_anonymous_users: 300,
+      external_email_enabled: false,
+      external_phone_enabled: false,
+    });
   });
 });

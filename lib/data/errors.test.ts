@@ -10,6 +10,7 @@ describe('toUserMessage', () => {
     [{ code: '22023', message: 'invoice_needs_items' }, 'Add at least one line item.'],
     [{ code: 'P0002', message: 'invoice_not_found' }, "We couldn't find that invoice."],
     [{ code: '42501', message: 'not_a_member' }, SANDBOX_EXPIRED_MESSAGE],
+    [{ code: 'P0001', message: 'row_limit_reached' }, 'Your demo copy is full. Reset sample data to start over.'],
     [{ code: '23505', message: 'duplicate key value violates unique constraint "invoices_business_id_number_key"' }, 'That invoice number is already used.'],
     [{ code: '23514', message: 'new row violates check constraint' }, "Some values aren't allowed. Check the form and try again."],
     [{ code: 'XX000', message: 'internal error with details' }, GENERIC_SAVE_ERROR],

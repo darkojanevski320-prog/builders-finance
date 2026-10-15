@@ -12,12 +12,14 @@ export async function getSandboxState(supabase: SupabaseClient): Promise<Sandbox
   const sub = data?.claims?.sub;
   const userId = typeof sub === 'string' ? sub : null;
   if (!userId) return resolveSandboxState(null, null);
-  const { data: membership } = await supabase
+  const { data: membership, error } = await supabase
     .from('business_members')
     .select('business_id, businesses(name)')
     .eq('user_id', userId)
     .limit(1)
     .maybeSingle<MembershipRow>();
+  // A failed query is not an expired sandbox; let the error boundary offer Try again.
+  if (error) throw error;
   return resolveSandboxState(userId, membership ?? null);
 }
 

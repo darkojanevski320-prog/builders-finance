@@ -9,6 +9,9 @@ export function buildEnvFile(url: string, key: string): string {
 export const SETUP_AUTH_CONFIG = {
   external_anonymous_users_enabled: true,
   rate_limit_anonymous_users: 300,
+  // Only anonymous demo sessions; email or phone users would never be cleaned up.
+  external_email_enabled: false,
+  external_phone_enabled: false,
 } as const;
 
 export function isProjectRef(ref: string): boolean {
