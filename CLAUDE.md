@@ -18,6 +18,7 @@ This is the canonical project guide; `AGENTS.md` is a short Codex adapter.
 - Target customer: any small business owner, no specific industry. "Builders" is the brand only.
 - Version 1 is a demo prototype: one sample business, fake data, no login. Scope every
   record to a business so multi-business SaaS needs no rewrite.
+- The demo is editable: add expenses, create invoices, mark paid, reset to sample data.
 - This is a product for other businesses. It is separate from `../Business Finance/`
   (Bold Boost LLC's own ledger) and `../Digital Corner Bookkeeping/` (the Dutch BV).
   Do not read or copy their real financial data into this project.
