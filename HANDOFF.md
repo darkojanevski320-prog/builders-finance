@@ -19,11 +19,11 @@ sectioned design, written spec in `docs/specs/`, then an implementation plan.
 - Separate from `../Business Finance/` (Bold Boost's own books). No shared data.
 - Sample data only until a real data source is approved.
 - Target customer: any small business owner, no specific industry. "Builders" is only the brand (Darko, 2026-10-15).
+- Version 1: demo prototype, one sample business, realistic fake data, no login. Data model scoped per business so it can become multi-business SaaS later (Darko, 2026-10-15).
 
 ## Open questions / blockers
 
-- Where does the data come from (manual entry, CSV import, bank sync, accounting tool)?
-- Single-business tool for Darko's clients, or multi-tenant SaaS?
+- Demo interactivity: read-only dashboard over seeded data, or add and edit records?
 - Tech stack and hosting.
 
 ## Next actions
