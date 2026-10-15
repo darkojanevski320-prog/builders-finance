@@ -37,8 +37,8 @@ No commands yet. Add verified dev and test commands here once the stack exists.
 | Task | Read or use |
 |---|---|
 | Current work | `HANDOFF.md` |
-| Product design | `docs/specs/2026-10-15-builders-finance-design.md` (waiting for review) |
-| Implementation plan | `docs/plans/` (none yet) |
+| Product design | `docs/specs/2026-10-15-builders-finance-design.md` (approved) |
+| Implementation plan | `docs/plans/2026-10-15-builders-finance-v1.md` (waiting for review) |
 
 ## Continuity
 

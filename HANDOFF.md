@@ -6,9 +6,10 @@ Last updated: 2026-10-15
 
 ## Current focus
 
-Product design for the Builders Finance app. All 7 design sections are approved and
-the spec is written: `docs/specs/2026-10-15-builders-finance-design.md`. Waiting on
-Darko to review the written spec. No plan or code yet.
+The spec is approved (`docs/specs/2026-10-15-builders-finance-design.md`). The
+implementation plan is written: `docs/plans/2026-10-15-builders-finance-v1.md`, 17 tasks
+from scaffold to live deploy and launch cleanup. Waiting on Darko to review it and pick
+an execution method. No app code yet.
 
 Design flow still to run, in order:
 
@@ -16,9 +17,9 @@ Design flow still to run, in order:
 2. Done: approaches compared.
 3. Done: present the design in sections (screens, data model, data flow, sample data
    generator, error handling, testing) and get approval after each one.
-4. Done: spec written to `docs/specs/2026-10-15-builders-finance-design.md`, self-reviewed,
-   committed. Waiting: Darko reviews it.
-5. Write the implementation plan in `docs/plans/`. No app code before the plan is approved.
+4. Done: spec written, reviewed and approved by Darko (2026-10-15).
+5. Done: implementation plan written. Waiting: Darko reviews it and picks subagent-driven
+   or native execution. No app code before the plan is approved.
 
 ## Changed recently
 
@@ -44,7 +45,7 @@ Design flow still to run, in order:
 
 ## Open questions / blockers
 
-- **Waiting on Darko:** review of the written spec.
+- **Waiting on Darko:** review of the implementation plan and choice of execution method.
 
 - Hosting accounts (2026-10-15): Darko created new accounts only for this project and
   chose Vercel plus Supabase, which points to the shared Supabase option above. Confirm
@@ -65,8 +66,8 @@ Design flow still to run, in order:
 
 ## Next actions
 
-- After Darko approves the spec, write the implementation plan in `docs/plans/` with the
-  writing-plans skill. No app code before the plan is approved.
+- After Darko approves the plan, execute it task by task (Task 1 first: scaffold).
+  Docker Desktop must be running from Task 5 on.
 
 ## Verification / commands
 
