@@ -23,7 +23,7 @@ Design flow still to run, in order:
 ## Changed recently
 
 - 2026-10-15: Project created from `_template` and registered in `../PROJECTS.md`.
-  Local git repo initialized (no remote). Scope and decisions recorded in `CLAUDE.md`
+  Local git repo initialized. Scope and decisions recorded in `CLAUDE.md`
   and here. The brainstorming session ran from the workspace root and stopped here
   so work continues from this folder.
 
@@ -61,7 +61,10 @@ Design flow still to run, in order:
     `VERCEL_TOKEN`, `SUPABASE_ACCESS_TOKEN`. Load them per command
     (`set -a; source .env.accounts.local; set +a`) so the old global logins stay untouched.
     Never print or commit them.
-- GitHub remote: not created. Ask Darko before running `gh repo create`.
+- GitHub remote: public repo https://github.com/darkojanevski320-prog/builders-finance
+  (created 2026-10-15). This repo commits as `Darko Janevski
+  <343090160+darkojanevski320-prog@users.noreply.github.com>` and pushes with the token
+  through a repo-local credential helper. Never commit with `darko@boldboost.us`.
 
 ## Next actions
 
