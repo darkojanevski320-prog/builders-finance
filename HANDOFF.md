@@ -49,6 +49,18 @@ Design flow still to run, in order:
   - **Shared Supabase database:** Next.js plus Supabase from day one. Closer to final
     SaaS, but every visitor edits the same business, so it needs a scheduled reset and
     a hosted database for a no-login demo.
+- Hosting accounts (2026-10-15): Darko created new accounts only for this project and
+  chose Vercel plus Supabase, which points to the shared Supabase option above. Confirm
+  this in the design step.
+  - GitHub: `darkojanevski320-prog` (id 343090160). Not `boldboost` or `aifactory-ad`,
+    which are also signed in to `gh` on this Mac.
+  - Vercel: `darkojanevski320-prog`.
+  - Supabase: org `Builders` (`dvzixbhxklrpogrjchry`), project `Builders` already exists
+    in `eu-west-1`.
+  - Tokens live in `.env.accounts.local` (gitignored, mode 600) as `GH_TOKEN`,
+    `VERCEL_TOKEN`, `SUPABASE_ACCESS_TOKEN`. Load them per command
+    (`set -a; source .env.accounts.local; set +a`) so the old global logins stay untouched.
+    Never print or commit them.
 - GitHub remote: not created. Ask Darko before running `gh repo create`.
 
 ## Next actions
