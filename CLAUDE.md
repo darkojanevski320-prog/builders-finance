@@ -22,6 +22,10 @@ This is the canonical project guide; `AGENTS.md` is a short Codex adapter.
 - This is a product for other businesses. It is separate from `../Business Finance/`
   (Bold Boost LLC's own ledger) and `../Digital Corner Bookkeeping/` (the Dutch BV).
   Do not read or copy their real financial data into this project.
+- Built live on Darko's podcast (from Darko, 2026-10-15). The public GitHub repo is the
+  deliverable for viewers: anyone must be able to clone it and run or deploy their own
+  copy on their own Vercel and Supabase. Keep setup documented and reproducible, and
+  never show tokens or secrets on screen or in the repo.
 - Use only generated sample data until a real data source is approved.
 - No feature in this app moves money.
 - Design before code: the approved spec lives in `docs/specs/`, the plan in `docs/plans/`.
