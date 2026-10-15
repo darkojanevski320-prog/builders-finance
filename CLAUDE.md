@@ -19,9 +19,8 @@ This is the canonical project guide; `AGENTS.md` is a short Codex adapter.
 - Version 1 is a demo prototype: one sample business, fake data, no login. Scope every
   record to a business so multi-business SaaS needs no rewrite.
 - The demo is editable: add expenses, create invoices, mark paid, reset to sample data.
-- This is a product for other businesses. It is separate from `../Business Finance/`
-  (Bold Boost LLC's own ledger) and `../Digital Corner Bookkeeping/` (the Dutch BV).
-  Do not read or copy their real financial data into this project.
+- This is a product for other businesses. Never read or copy real financial data from any other project or
+  source into this repository.
 - Built live on Darko's podcast (from Darko, 2026-10-15). The public GitHub repo is the
   deliverable for viewers: anyone must be able to clone it and run or deploy their own
   copy on their own Vercel and Supabase. Keep setup documented and reproducible, and
